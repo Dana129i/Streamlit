@@ -1,2 +1,2 @@
 # dashboard
-dashboard
+streamlit study
