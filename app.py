@@ -260,4 +260,4 @@ with tab2:
 
 # 푸터
 st.markdown("---")
-st.caption("© 2025 학생 성적 관리 대시보드 | Streamlit으로 제작되었습니다")
+st.caption("© 2025 학생 성적 관리 대시보드 | Streamlit으로 제작되었습니다.")
