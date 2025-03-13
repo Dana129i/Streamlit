@@ -1,4 +1,3 @@
-# ChatGPT 도움
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -76,17 +75,18 @@ if filter_option != "전체 학생":
     else:
         filtered_df = filtered_df[filtered_df[selected_subject] < subject_avg]
 
-# 탭 선택 (streamlit의 selectbox로 탭을 구현)
-tab = st.selectbox("탭을 선택하세요", ["📋 학생 성적", "📊 데이터 분석"])
+# 메인 컨텐츠 탭나누기
+tab1, tab2 = st.tabs(["📋 학생 성적", "📊 데이터 분석"])
 
-if tab == "📋 학생 성적":
-    # 기본 데이터프레임 표시 (요구사항 2)
+# 📋 학생 성적 탭 내용
+with tab1:
     st.subheader("학생 성적 데이터")
     
     # 정렬 옵션
     sort_options = st.radio(
-        "정렬 기준",
-        ["정렬 없음", "평균 높은 순", "평균 낮은 순"]
+    "정렬 기준",
+    ["정렬 없음", "평균 높은 순", "평균 낮은 순"],
+    horizontal=True
     )
     
     # 데이터 정렬 (요구사항 4)
@@ -162,7 +162,8 @@ if tab == "📋 학생 성적":
             })
         st.json(total_scores)
 
-elif tab == "📊 데이터 분석":
+# 📊 데이터 분석 탭 내용
+with tab2:
     st.subheader("성적 분석")
     
     # 과목별 평균 점수
