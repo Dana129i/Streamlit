@@ -1,1 +1,1 @@
-# Streamlit 앱 구현 repo
+# 앱 구현용 repo
